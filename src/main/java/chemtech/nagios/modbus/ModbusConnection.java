@@ -45,7 +45,7 @@ public class ModbusConnection implements IcingaConnection {
         connection.setTimeout(timeout);
         connection.connect();
         transaction = new ModbusTCPTransaction(connection);
-        transaction.setRetries(1);
+        transaction.setRetries(10);
         transaction.setReconnecting(true);
 	}
 	
